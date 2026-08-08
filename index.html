@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elevate Web Solution — World-Class Digital Architecture &amp; Engineering</title>
-<meta name="description" content="Elevate Web Solution engineers hyper-premium digital flagships, institutional web apps, and immersive platforms from Mombasa, Kenya, to global standards." />
-<meta property="og:title" content="Elevate Web Solution — Premium Digital Studio" />
-<meta property="og:description" content="High-end web design, bespoke applications, and elite digital experiences built from Mombasa, Kenya." />
+<title>Elevate Web Solution — Digital Product &amp; UI/UX Design Services</title>
+<meta name="description" content="Elevate Web Solution designs digital products for Kenya, East Africa, and global markets that are clean, fast, and high-converting." />
+<meta property="og:title" content="Elevate Web Solution — Digital Product &amp; UI/UX Design Services" />
+<meta property="og:description" content="Digital product & UI/UX design services built from Mombasa, Kenya." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23D4AF37%22>E</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg-deep: #050507;
-    --bg-surface: #0a0a0f;
-    --bg-glass: rgba(14, 14, 22, 0.7);
-    --border-color: rgba(212, 175, 55, 0.15);
-    --border-hover: rgba(212, 175, 55, 0.4);
+    --bg-surface: #0c0c12;
+    --bg-card: #12121c;
+    --border-color: rgba(212, 175, 55, 0.18);
+    --border-hover: rgba(212, 175, 55, 0.45);
     --gold: #D4AF37;
     --gold-light: #F3E5AB;
     --gold-dark: #AA7C11;
     --text-main: #F4F4F6;
     --text-muted: #9494A0;
-    --font-heading: 'Syncopate', 'Space Grotesk', sans-serif;
     --font-sans: 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'Space Grotesk', monospace;
     --transition: cubic-bezier(0.16, 1, 0.3, 1);
@@ -42,29 +41,20 @@
     color: var(--text-main);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    selection-background-color: var(--gold);
-    selection-color: var(--bg-deep);
   }
 
   body {
     position: relative;
     overflow-x: hidden;
-    background: radial-gradient(circle at 50% 0%, #12101f 0%, var(--bg-deep) 70%);
+    background: radial-gradient(circle at 50% 0%, #16130b 0%, var(--bg-deep) 60%);
   }
 
   /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--bg-deep);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--gold-dark);
-    border-radius: 3px;
-  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
 
-  /* Immersive Background Canvas */
+  /* Background Interactive Canvas */
   #glCanvas {
     position: fixed;
     top: 0;
@@ -73,10 +63,9 @@
     height: 100vh;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.45;
+    opacity: 0.35;
   }
 
-  /* Ambient Grain Layer */
   .noise-overlay {
     position: fixed;
     top: 0;
@@ -97,12 +86,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5vw;
-    background: rgba(5, 5, 7, 0.8);
+    padding: 1.25rem 5vw;
+    background: rgba(5, 5, 7, 0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     z-index: 100;
-    transition: transform 0.4s var(--transition), background 0.4s var(--transition);
   }
 
   .nav__brand {
@@ -111,41 +99,29 @@
     gap: 0.75rem;
     text-decoration: none;
     color: var(--text-main);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: var(--font-mono);
+    letter-spacing: -0.5px;
   }
 
   .nav__mark {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: var(--bg-deep);
     font-weight: 800;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
-    font-family: var(--font-heading);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-  }
-
-  .nav__word {
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav__word span {
-    font-size: 0.5rem;
-    color: var(--gold);
-    letter-spacing: 3px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
   }
 
   .nav__links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
   }
 
@@ -155,34 +131,24 @@
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.3s ease;
-    position: relative;
   }
 
-  .nav__links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: width 0.3s var(--transition);
-  }
-
-  .nav__links a:hover, .nav__links a.active {
+  .nav__links a:hover {
     color: var(--gold);
   }
 
-  .nav__links a:hover::after, .nav__links a.active::after {
-    width: 100%;
+  .nav__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .nav__cta {
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: var(--bg-deep);
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.85rem;
     text-decoration: none;
     display: flex;
@@ -204,607 +170,470 @@
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
+    padding: 5px;
   }
 
   .burger span {
-    width: 28px;
+    width: 26px;
     height: 2px;
     background: var(--text-main);
     transition: 0.3s;
+    border-radius: 2px;
   }
 
-  /* Main Layout Containers */
+  /* Main Wrapper */
   main {
     position: relative;
     z-index: 10;
-  }
-
-  section {
-    padding: 8rem 5vw;
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 5vw;
   }
 
   /* Hero Section */
   .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 12rem;
-    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
   }
 
-  .eyebrow {
+  .clutch-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--gold);
-    background: rgba(212, 175, 55, 0.08);
-    padding: 0.4rem 1rem;
-    border-radius: 30px;
+    background: var(--bg-surface);
     border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
 
-  .eyebrow__dot {
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--gold);
-    animation: pulse 2s infinite;
+  .clutch-badge span {
+    color: #FFC107;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
   }
 
-  @keyframes pulse {
-    0% { transform: scale(0.95); opacity: 0.8; }
-    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 15px var(--gold); }
-    100% { transform: scale(0.95); opacity: 0.8; }
-  }
-
-  .hero__headline {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 5.5rem);
+  .hero h1 {
+    font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+    font-weight: 800;
     line-height: 1.1;
-    font-weight: 700;
-    max-width: 1100px;
-    letter-spacing: -1px;
-    margin-bottom: 2rem;
-  }
-
-  .hero__headline span {
-    background: linear-gradient(135deg, #FFF 30%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+    max-width: 950px;
   }
 
   .hero__sub {
-    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: var(--text-muted);
-    max-width: 700px;
+    max-width: 750px;
     line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero__quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    padding-left: 1rem;
     margin-bottom: 3rem;
   }
 
   .hero__actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .btn {
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     text-decoration: none;
-    transition: all 0.3s var(--transition);
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
+    transition: all 0.3s var(--transition);
   }
 
   .btn--primary {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    background: var(--gold);
     color: var(--bg-deep);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
   }
 
   .btn--primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    background: #e6be3f;
+    transform: translateY(-2px);
   }
 
   .btn--outline {
     background: transparent;
     color: var(--text-main);
     border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
   }
 
   .btn--outline:hover {
     border-color: var(--gold);
-    color: var(--gold);
     background: rgba(212, 175, 55, 0.05);
   }
 
-  .hero__metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+  /* Moving Ticker / Infinite Marquee */
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(12, 12, 18, 0.6);
     border-top: 1px solid var(--border-color);
-    padding-top: 3rem;
-  }
-
-  .metric-item dt {
-    font-family: var(--font-heading);
-    font-size: 2.25rem;
-    color: var(--gold);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .metric-item dd {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* Section Headings */
-  .section-header {
-    margin-bottom: 5rem;
-  }
-
-  .section-header h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
-    letter-spacing: -1px;
-    line-height: 1.2;
-    margin-top: 1rem;
-  }
-
-  .section-header p {
-    color: var(--text-muted);
-    font-size: 1.15rem;
-    margin-top: 1rem;
-    max-width: 600px;
-  }
-
-  /* Interactive Work Showcase */
-  .work__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 3rem;
-  }
-
-  @media(max-width: 768px) {
-    .work__grid { grid-template-columns: 1fr; }
-  }
-
-  .project-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.4s var(--transition), border-color 0.4s var(--transition), box-shadow 0.4s var(--transition);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .project-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--border-hover);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.1);
-  }
-
-  .project__preview {
-    width: 100%;
-    height: 320px;
-    background: #111;
-    position: relative;
-    overflow: hidden;
     border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    margin: 3rem 0 6rem 0;
+    white-space: nowrap;
+    position: relative;
   }
 
-  .project__preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s var(--transition);
-    filter: brightness(0.9);
-  }
-
-  .project-card:hover .project__preview img {
-    transform: scale(1.04);
-    filter: brightness(1);
-  }
-
-  .project__bar {
+  .ticker-wrap::before, .ticker-wrap::after {
+    content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 36px;
-    background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    gap: 6px;
-    border-bottom: 1px solid var(--border-color);
+    width: 100px;
+    height: 100%;
     z-index: 2;
+    pointer-events: none;
+  }
+  .ticker-wrap::before { left: 0; background: linear-gradient(to right, var(--bg-deep), transparent); }
+  .ticker-wrap::after { right: 0; background: linear-gradient(to left, var(--bg-deep), transparent); }
+
+  .ticker-track {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
   }
 
-  .project__bar i {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .project__bar span {
-    margin-left: auto;
+  .ticker-track span {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
-  .project__content {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  .project__content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
-  }
-
-  .project__content p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    flex-grow: 1;
-  }
-
-  .project__tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    list-style: none;
-  }
-
-  .project__tags li {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    background: rgba(212, 175, 55, 0.05);
-    border: 1px solid var(--border-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 6px;
-    color: var(--gold);
-  }
-
-  .project__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-main);
-    text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    color: var(--text-muted);
+    margin-right: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
-  .project__link:hover {
+  .ticker-track span:hover {
     color: var(--gold);
   }
 
-  /* About Section */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
-    align-items: center;
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
-  @media(max-width: 968px) {
-    .about { grid-template-columns: 1fr; gap: 4rem; }
-  }
-
-  .about__media {
-    position: relative;
-  }
-
-  .about__frame {
-    width: 100%;
-    aspect-ratio: 4/5;
+  /* Device Showcase Mockup Frame */
+  .mockup-frame {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: 24px;
-    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
     position: relative;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    overflow: hidden;
+    margin-bottom: 8rem;
   }
 
-  .about__frame img {
+  .mockup-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Services & Lists Section */
+  .service-section {
+    margin-bottom: 8rem;
+  }
+
+  .service-header {
+    margin-bottom: 3rem;
+  }
+
+  .service-header h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  .service-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+
+  .service-list {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-main);
+    transition: background 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .service-item:hover {
+    color: var(--gold);
+    padding-left: 1rem;
+    background: rgba(212, 175, 55, 0.02);
+  }
+
+  .service-item__left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .service-item__num {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .service-item__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .service-item__arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .service-item:hover .service-item__arrow {
+    background: var(--gold);
+    color: var(--bg-deep);
+    border-color: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  /* About / Founder Section with profile.jpg */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 8rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: 4rem;
+  }
+
+  @media(max-width: 968px) {
+    .about-grid { grid-template-columns: 1fr; padding: 2rem; gap: 3rem; }
+  }
+
+  .profile-container {
+    position: relative;
+  }
+
+  .profile-frame {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    background: var(--bg-card);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  }
+
+  .profile-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(20%) contrast(110%);
+    filter: contrast(105%) saturate(100%);
   }
 
-  .about__badge {
-    position: absolute;
-    bottom: -2rem;
-    right: -2rem;
-    background: var(--bg-deep);
-    border: 1px solid var(--border-color);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    max-width: 260px;
+  .about-content h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
   }
 
-  .about__badge h4 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--gold);
-    margin-bottom: 0.25rem;
-  }
-
-  .about__badge p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
-
-  .about__content h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    line-height: 1.2;
-  }
-
-  .about__content p {
+  .about-content p {
     color: var(--text-muted);
     font-size: 1.05rem;
     line-height: 1.7;
     margin-bottom: 2rem;
   }
 
-  .about__list {
+  .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    list-style: none;
+    gap: 2rem;
     border-top: 1px solid var(--border-color);
     padding-top: 2rem;
   }
 
-  .about__list li strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    color: var(--text-main);
+  .stat-box h4 {
+    font-size: 2rem;
+    color: var(--gold);
+    font-family: var(--font-mono);
     margin-bottom: 0.25rem;
   }
 
-  .about__list li span {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* Process Section */
-  .process__steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    counter-reset: step;
-  }
-
-  .process-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s var(--transition);
-  }
-
-  .process-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-  }
-
-  .process-card::before {
-    counter-increment: step;
-    content: "0" counter(step);
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: rgba(212, 175, 55, 0.05);
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-weight: 800;
-  }
-
-  .process-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--gold);
-  }
-
-  .process-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Capabilities Matrix */
-  .capabilities__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .capability-box {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 3rem 2.5rem;
-    transition: all 0.4s var(--transition);
-  }
-
-  .capability-box:hover {
-    background: linear-gradient(135deg, var(--bg-surface), rgba(212, 175, 55, 0.03));
-    border-color: var(--gold);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-  }
-
-  .capability-box h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
-    letter-spacing: -0.5px;
-  }
-
-  .capability-box p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Contact Hub */
-  .contact {
-    background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-surface) 100%);
-    border-top: 1px solid var(--border-color);
-    position: relative;
-  }
-
-  .contact__container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .contact__container h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 4vw, 4rem);
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-  }
-
-  .contact__container p {
-    color: var(--text-muted);
-    font-size: 1.15rem;
-    margin-bottom: 4rem;
-  }
-
-  .contact__channels {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .channel-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    padding: 2.5rem 1.5rem;
-    border-radius: 20px;
-    text-decoration: none;
-    color: var(--text-main);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.3s var(--transition);
-  }
-
-  .channel-card:hover {
-    background: rgba(212, 175, 55, 0.05);
-    border-color: var(--gold);
-    transform: translateY(-5px);
-  }
-
-  .channel-card svg {
-    color: var(--gold);
-    width: 28px;
-    height: 28px;
-  }
-
-  .channel-card span:nth-of-type(1) {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-  }
-
-  .channel-card span:nth-of-type(2) {
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .location-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
+  .stat-box p {
     font-size: 0.85rem;
     color: var(--text-muted);
-    background: rgba(255, 255, 255, 0.03);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
+    margin: 0;
   }
 
-  /* Footer */
-  footer {
-    background: var(--bg-deep);
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 8rem;
+  }
+
+  .faq-list {
     border-top: 1px solid var(--border-color);
-    padding: 3rem 5vw;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+  }
+
+  .faq-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    font-size: 0.85rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    width: 100%;
+    text-align: left;
+  }
+
+  .faq-answer {
     color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
-  @media(max-width: 768px) {
-    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
-    .nav__links { display: none; }
-    .burger { display: flex; }
+  .faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 1rem;
   }
 
-  /* Mobile Overlay Menu */
+  /* Footer Section */
+  .footer {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    padding: 5rem 5vw 3rem 5vw;
+    margin-top: 5rem;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+  }
+
+  .footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 350px;
+    line-height: 1.6;
+  }
+
+  .footer-links-col h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-links-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+
+  .footer-links-col a:hover {
+    color: var(--gold);
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Mobile Navigation Menu Overlay */
   .mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: var(--bg-surface);
+    background: var(--bg-deep);
     z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    transition: right 0.5s var(--transition);
+    transition: right 0.4s var(--transition);
   }
 
   .mobile-menu.open {
@@ -812,15 +641,19 @@
   }
 
   .mobile-menu a {
-    font-family: var(--font-heading);
+    font-family: var(--font-mono);
     font-size: 1.5rem;
     color: var(--text-main);
     text-decoration: none;
-    transition: color 0.3s;
   }
 
   .mobile-menu a:hover {
     color: var(--gold);
+  }
+
+  @media(max-width: 768px) {
+    .nav__links { display: none; }
+    .burger { display: flex; }
   }
 </style>
 </head>
@@ -829,310 +662,254 @@
 <div class="noise-overlay"></div>
 <canvas id="glCanvas"></canvas>
 
+<!-- NAV BAR -->
 <header class="nav" id="nav">
   <a href="#top" class="nav__brand">
     <div class="nav__mark">E</div>
-    <div class="nav__word">
-      ELEVATE
-      <span>WEB SOLUTION</span>
-    </div>
+    <span>ELEVATE</span>
   </a>
   <ul class="nav__links">
-    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav__cta" href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27d%20like%20to%20discuss%20a%20flagship%20digital%20project." target="_blank" rel="noopener">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.35-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.6.83 2.06.9 2.21.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.24.66-.15.27.1 1.72.81 2.01.96.3.15.49.22.56.35.08.13.08.72-.15 1.4Z"/></svg>
-    Secure Consultation
-  </a>
-  <button class="burger" id="burger" aria-label="Toggle Navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="nav__right">
+    <a class="nav__cta" href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27d%20like%20to%20discuss%20a%20digital%20project." target="_blank" rel="noopener">
+      Contact us →
+    </a>
+    <button class="burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#work" class="mobile-link">Work</a>
-  <a href="#about" class="mobile-link">About</a>
-  <a href="#process" class="mobile-link">Process</a>
-  <a href="#capabilities" class="mobile-link">Capabilities</a>
-  <a href="#contact" class="mobile-link">Contact</a>
-  <a href="https://wa.me/254746357349" class="btn btn--primary" target="_blank" rel="noopener">WhatsApp Direct</a>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <a href="https://wa.me/254746357349" class="btn btn--primary" target="_blank" rel="noopener">Chat on WhatsApp →</a>
 </div>
 
 <main id="top">
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="eyebrow">
-      <div class="eyebrow__dot"></div>
-      Elite Digital Engineering &middot; Mombasa, Kenya
+    <div class="clutch-badge">
+      <span>★ 5.0</span> Verified Client Excellence
     </div>
-    <h1 class="hero__headline">
-      Engineering high-performance <span>digital flagships</span> for global industry leaders.
-    </h1>
+    <h1>Digital product &amp; UI UX design services</h1>
     <p class="hero__sub">
-      Elevate Web Solution architecturally designs and engineers world-class web applications, institutional platforms, and high-conversion digital experiences that dominate online.
+      Are you struggling to turn your ideas into something users love? Elevate Web Solution designs digital products for Kenya, East Africa, and global markets that are clean, fast.
+    </p>
+    <p class="hero__quote">
+      "Design is the bridge between user intent and product impact."
     </p>
     <div class="hero__actions">
-      <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27d%20like%20to%20commission%20a%20project." class="btn btn--primary" target="_blank" rel="noopener">
-        Initialize Project via WhatsApp
+      <a class="btn btn--primary" href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27d%20like%20to%20consult%20an%20expert." target="_blank" rel="noopener">
+        Consult an expert →
       </a>
-      <a href="#work" class="btn btn--outline">
-        Explore Flagship Works &darr;
+      <a class="btn btn--outline" href="#services">
+        See our work
       </a>
     </div>
-    <dl class="hero__metrics">
-      <div class="metric-item">
-        <dt>04+</dt>
-        <dd>Production-Grade Shipped Systems</dd>
-      </div>
-      <div class="metric-item">
-        <dt>100%</dt>
-        <dd>Custom Code Architectures</dd>
-      </div>
-      <div class="metric-item">
-        <dt>&lt;1hr</dt>
-        <dd>Executive Response Protocol</dd>
-      </div>
-    </dl>
+
+    <!-- MOCKUP SCREENSHOT PREVIEW -->
+    <div class="mockup-frame">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Dashboard Preview" loading="lazy" />
+    </div>
   </section>
 
-  <!-- SELECTED WORK -->
-  <section id="work">
-    <div class="section-header">
-      <div class="eyebrow"><div class="eyebrow__dot"></div> Portfolio &amp; Index</div>
-      <h2>Engineered for Scale.<br>Live in Production.</h2>
-      <p>Every digital product below represents production software running live traffic right now.</p>
+  <!-- MOVING WORDS TICKER -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>UI/UX Design</span>
+      <span>Web Architecture</span>
+      <span>Mobile Apps</span>
+      <span>Digital Flagships</span>
+      <span>High Conversion</span>
+      <span>Fast Performance</span>
+      <span>UI/UX Design</span>
+      <span>Web Architecture</span>
+      <span>Mobile Apps</span>
+      <span>Digital Flagships</span>
+      <span>High Conversion</span>
+      <span>Fast Performance</span>
+    </div>
+  </div>
+
+  <!-- SERVICES SECTION -->
+  <section class="service-section" id="services">
+    <div class="service-header">
+      <h2>UI/UX Design &amp; Digital Engineering</h2>
+      <p>Your users will find the app easy to use. Our UI and UX services ensure your product is user-friendly so that it appeals to and catches the hearts of users on any device.</p>
     </div>
 
-    <div class="work__grid">
-      <!-- Project 1 -->
-      <article class="project-card">
-        <div class="project__preview">
-          <div class="project__bar">
-            <i></i><i></i><i></i>
-            <span>petermusau.co.ke</span>
+    <ul class="service-list">
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20UI%20UX%20Research%20Service." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">01</span>
+            <span class="service-item__title">UI/UX Research Service</span>
           </div>
-          <img src="https://petermusau.netlify.app/screenshot.png" alt="Peter Musau Mutua Platform Preview" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0a0f\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'20\' text-anchor=\'middle\' dominant-baseline=\'middle\'>petermusau.co.ke</text></svg>'">
-        </div>
-        <div class="project__content">
-          <h3>Peter Musau Mutua</h3>
-          <p>A unified personal ministry, academic publishing, and multimedia knowledge hub equipped with integrated mobile checkout workflows and examination matrices.</p>
-          <ul class="project__tags">
-            <li>Static Architecture</li>
-            <li>WhatsApp Commerce</li>
-            <li>Content Hub</li>
-          </ul>
-          <a href="https://petermusau.co.ke" class="project__link" target="_blank" rel="noopener">Inspect Live System &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project-card">
-        <div class="project__preview">
-          <div class="project__bar">
-            <i></i><i></i><i></i>
-            <span>portal.bethaniaacademy.com</span>
-          </div>
-          <img src="https://avspdkeozxuxzbmegqwl.supabase.co/storage/v1/object/public/Images/bethania.jpg" alt="Bethania Academy CBA Portal Preview" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0a0f\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'20\' text-anchor=\'middle\' dominant-baseline=\'middle\'>portal.bethaniaacademy.com</text></svg>'">
-        </div>
-        <div class="project__content">
-          <h3>Bethania Academy — CBA Portal</h3>
-          <p>An enterprise-grade school management web application featuring multi-tier role-based auth (Admin, Teachers, Learners), real-time Supabase integration, and ledger tracking.</p>
-          <ul class="project__tags">
-            <li>Web Application</li>
-            <li>Supabase Cloud</li>
-            <li>Role-Based Access</li>
-          </ul>
-          <a href="https://portal.bethaniaacademy.com" class="project__link" target="_blank" rel="noopener">Inspect Live System &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="project-card">
-        <div class="project__preview">
-          <div class="project__bar">
-            <i></i><i></i><i></i>
-            <span>bethaniaacademy.com</span>
-          </div>
-          <img src="https://bethaniaacademy.com/images/main.jpg" alt="FPFK Bethania Academy Campus" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0a0f\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'20\' text-anchor=\'middle\' dominant-baseline=\'middle\'>bethaniaacademy.com</text></svg>'">
-        </div>
-        <div class="project__content">
-          <h3>FPFK Bethania Academy</h3>
-          <p>The definitive digital flagship for an elite educational institution — offering dynamic admissions routing, interactive announcements, and high-end multimedia asset management.</p>
-          <ul class="project__tags">
-            <li>Institutional Flagship</li>
-            <li>Admissions Portal</li>
-            <li>CMS Architecture</li>
-          </ul>
-          <a href="https://bethaniaacademy.com" class="project__link" target="_blank" rel="noopener">Inspect Live System &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card">
-        <div class="project__preview">
-          <div class="project__bar">
-            <i></i><i></i><i></i>
-            <span>georgexgraphics.com</span>
-          </div>
-          <img src="https://georgexgraphics.com/headteacher.jpg" alt="Onyando Designs Portfolio Preview" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0a0f\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'20\' text-anchor=\'middle\' dominant-baseline=\'middle\'>georgexgraphics.com</text></svg>'">
-        </div>
-        <div class="project__content">
-          <h3>Onyando Designs</h3>
-          <p>A high-impact personal brand and cinematic portfolio engineered for a premier creative director, showcasing robust visual storytelling and structured service packages.</p>
-          <ul class="project__tags">
-            <li>Creative Portfolio</li>
-            <li>Brand Architecture</li>
-            <li>Dynamic Pricing</li>
-          </ul>
-          <a href="https://georgexgraphics.com" class="project__link" target="_blank" rel="noopener">Inspect Live System &rarr;</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="about__media">
-      <div class="about__frame">
-        <img src="assets/profile.jpg" alt="Founder & Principal Architect" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'750\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0a0f\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'24\' text-anchor=\'middle\' dominant-baseline=\'middle\'>ELEVATE STUDIO</text></svg>'">
-      </div>
-      <div class="about__badge">
-        <h4>100%</h4>
-        <p>Direct Engineering Accountability. No Middlemen.</p>
-      </div>
-    </div>
-    <div class="about__content">
-      <div class="eyebrow"><div class="eyebrow__dot"></div> Principal Architecture</div>
-      <h2>Uncompromising Quality. Single-Source Precision.</h2>
-      <p>Elevate Web Solution operates on a strict model of direct execution. Every line of code, database schema, and interface interaction is architected and deployed personally to ensure absolute perfection.</p>
-      <ul class="about__list">
-        <li>
-          <strong>Operations Base</strong>
-          <span>Likoni, Mombasa, Kenya</span>
-        </li>
-        <li>
-          <strong>Core Domains</strong>
-          <span>Web Apps, Portals, Institutional Sites</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="section-header">
-      <div class="eyebrow"><div class="eyebrow__dot"></div> Methodology</div>
-      <h2>A Rigorous Four-Step<br>Engineering Protocol.</h2>
-    </div>
-    <div class="process__steps">
-      <div class="process-card">
-        <h3>Discovery &amp; Scope</h3>
-        <p>We analyze your exact technical requirements, target demographics, and commercial objectives to blueprint a winning architecture.</p>
-      </div>
-      <div class="process-card">
-        <h3>Bespoke Design</h3>
-        <p>Custom user experience and interface engineering tailored exclusively to your brand identity — zero generic templates.</p>
-      </div>
-      <div class="process-card">
-        <h3>Full-Stack Build</h3>
-        <p>Development using high-performance technologies, optimized for blazing load speeds, security, and absolute mobile responsiveness.</p>
-      </div>
-      <div class="process-card">
-        <h3>Deployment &amp; Support</h3>
-        <p>Seamless launch onto secure global infrastructure followed by dedicated ongoing engineering support.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPABILITIES -->
-  <section id="capabilities">
-    <div class="section-header">
-      <div class="eyebrow"><div class="eyebrow__dot"></div> Technical Capabilities</div>
-      <h2>Full-Stack Engineering Excellence.</h2>
-    </div>
-    <div class="capabilities__grid">
-      <div class="capability-box">
-        <h3>Institutional &amp; Corporate Flagships</h3>
-        <p>Lightning-fast marketing domains, institutional hubs, and personal brand assets built to command immediate authority.</p>
-      </div>
-      <div class="capability-box">
-        <h3>Dynamic Web Applications</h3>
-        <p>Complex role-based dashboards, database integrations, and cloud infrastructures built securely on modern stacks like Supabase.</p>
-      </div>
-      <div class="capability-box">
-        <h3>Mobile-First Commerce</h3>
-        <p>Streamlined catalog flows configured for direct checkout integration, optimized for modern consumer habits in East Africa and beyond.</p>
-      </div>
-      <div class="capability-box">
-        <h3>Infrastructure Care</h3>
-        <p>Complete domain management, SSL provisioning, automated backups, and proactive performance maintenance.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="contact__container">
-      <div class="eyebrow" style="margin: 0 auto 2rem auto;"><div class="eyebrow__dot"></div> Direct Secure Channel</div>
-      <h2>Initiate Your Next Digital Flagship.</h2>
-      <p>Bypass corporate bureaucracy. Speak directly with the lead engineer and get an immediate consultation.</p>
-      
-      <div class="contact__channels">
-        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27d%20like%20to%20discuss%20a%20project." class="channel-card" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.35-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.6.83 2.06.9 2.21.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.24.66-.15.27.1 1.72.81 2.01.96.3.15.49.22.56.35.08.13.08.72-.15 1.4Z"/></svg>
-          <span>WhatsApp Protocol</span>
-          <span>+254 746 357 349</span>
+          <div class="service-item__arrow">↗</div>
         </a>
-        <a href="mailto:pm6482545@gmail.com" class="channel-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
-          <span>Electronic Mail</span>
-          <span>pm6482545@gmail.com</span>
+      </li>
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20UI%20Audit%20&%20Strategy." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">02</span>
+            <span class="service-item__title">UI Audit &amp; Strategy</span>
+          </div>
+          <div class="service-item__arrow">↗</div>
         </a>
-      </div>
+      </li>
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20UI%20Usability%20Testing." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">03</span>
+            <span class="service-item__title">UI Usability Testing</span>
+          </div>
+          <div class="service-item__arrow">↗</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20UI%20UX%20Consulting." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">04</span>
+            <span class="service-item__title">UI/UX Consulting</span>
+          </div>
+          <div class="service-item__arrow">↗</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20Full%20Website%20Design." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">05</span>
+            <span class="service-item__title">Website Design</span>
+          </div>
+          <div class="service-item__arrow">↗</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/254746357349?text=Hi%20Elevate%2C%20I%27m%20interested%20in%20Mobile%20App%20Design." class="service-item" target="_blank" rel="noopener">
+          <div class="service-item__left">
+            <span class="service-item__num">06</span>
+            <span class="service-item__title">Mobile App Design</span>
+          </div>
+          <div class="service-item__arrow">↗</div>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-      <div class="location-tag">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        Likoni, Mombasa, Kenya — Global Remote Delivery
+  <!-- ABOUT SECTION WITH profile.jpg -->
+  <section class="about-grid" id="about">
+    <div class="profile-container">
+      <div class="profile-frame">
+        <img src="profile.jpg" alt="Profile of Lead Architect" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%2312121c\'/><text x=\'50%\' y=\'50%\' fill=\'%23D4AF37\' font-family=\'monospace\' font-size=\'20\' text-anchor=\'middle\' dominant-baseline=\'middle\'>profile.jpg</text></svg>'">
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>Absolute Accountability &amp; Direct Execution</h2>
+      <p>Elevate Web Solution delivers elite digital craftsmanship directly. Every digital product is architected with precision, ensuring robust performance, modern aesthetics, and seamless user experiences from Mombasa to the world.</p>
+      <div class="about-stats">
+        <div class="stat-box">
+          <h4>100%</h4>
+          <p>Custom Architecture</p>
+        </div>
+        <div class="stat-box">
+          <h4>&lt;1hr</h4>
+          <p>Response Time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="service-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about our digital product and design process.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What UI/UX design services do you offer? <span>+</span></button>
+        <div class="faq-answer">We offer comprehensive user research, usability audits, wireframing, interactive prototyping, and full-stack product interface design.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does Elevate improve conversion rates? <span>+</span></button>
+        <div class="faq-answer">By combining clean visual hierarchy, lightning-fast web performance, and user-centered design patterns tailored to modern buyers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do we start a project? <span>+</span></button>
+        <div class="faq-answer">Simply tap the WhatsApp consultation button to connect directly with our lead engineer for an immediate scoping session.</div>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="nav__brand">
-    <div class="nav__mark" style="width: 28px; height: 28px; font-size: 0.9rem;">E</div>
-    <span style="font-family: var(--font-heading); font-size: 0.75rem; letter-spacing: 1px;">ELEVATE WEB SOLUTION</span>
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>ELEVATE</h3>
+      <p>Elevate Web Solution is a premier digital studio building high-performance web applications and UI/UX design systems from Mombasa, Kenya.</p>
+    </div>
+    <div class="footer-links-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">UI/UX Research</a></li>
+        <li><a href="#services">Website Design</a></li>
+        <li><a href="#services">Mobile App Design</a></li>
+        <li><a href="#services">Digital Strategy</a></li>
+      </ul>
+    </div>
+    <div class="footer-links-col">
+      <h4>Direct Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/254746357349" target="_blank" rel="noopener">WhatsApp: +254 746 357 349</a></li>
+        <li><a href="mailto:pm6482545@gmail.com">Email: pm6482545@gmail.com</a></li>
+        <li><a href="#top">Likoni, Mombasa, Kenya</a></li>
+      </ul>
+    </div>
   </div>
-  <p>&copy; <span id="year">2026</span> Elevate Web Solution. All rights reserved.</p>
-  <a href="https://wa.me/254746357349" style="color: var(--gold); text-decoration: none; font-weight: 600;" target="_blank" rel="noopener">Secure Chat &rarr;</a>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year">2026</span> Elevate Web Solution. All rights reserved.</p>
+    <a href="https://wa.me/254746357349" style="color: var(--gold); text-decoration: none; font-weight: 600;" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+  </div>
 </footer>
 
 <script>
   // Mobile Menu Handler
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const mobLinks = document.querySelectorAll('.mob-link');
 
   burger.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
   });
 
-  mobileLinks.forEach(link => {
+  mobLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
+    });
+  });
+
+  // FAQ Accordion Handler
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('active');
+      const span = button.querySelector('span');
+      span.textContent = item.classList.contains('active') ? '−' : '+';
     });
   });
 
   // Dynamic Year Update
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Immersive Background Canvas Animation (Interactive Particle Grid & Wave Nodes)
+  // Immersive Background Canvas Animation
   const canvas = document.getElementById('glCanvas');
   const ctx = canvas.getContext('2d');
 
@@ -1151,8 +928,8 @@
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
+      this.vx = (Math.random() - 0.5) * 0.3;
+      this.vy = (Math.random() - 0.5) * 0.3;
       this.radius = Math.random() * 1.5 + 0.5;
     }
 
@@ -1167,14 +944,14 @@
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(212, 175, 55, 0.4)';
+      ctx.fillStyle = 'rgba(212, 175, 55, 0.45)';
       ctx.fill();
     }
   }
 
   function initParticles() {
     particles = [];
-    const count = Math.floor((width * height) / 18000);
+    const count = Math.floor((width * height) / 20000);
     for (let i = 0; i < count; i++) {
       particles.push(new Particle());
     }
@@ -1194,11 +971,11 @@
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 120) {
+        if (dist < 130) {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(212, 175, 55, ${0.12 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(212, 175, 55, ${0.12 * (1 - dist / 130)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
